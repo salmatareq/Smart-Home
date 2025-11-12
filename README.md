@@ -16,27 +16,30 @@ A simple Java-based Smart Home system that allows users to **add, control, list,
 - Interactive menu-driven interface
 
 ---
-
 ## **Project Structure**
 
-SmartHome/
-│
-├── Source Packages/
-  ├── Actions/ # Device capability interfaces
-    ├── Adjustable.java
-    └── Recordable.java
-   
-  ├── Exceptions/ # Custom exception classes
-    ├── InvalidBrightnesslevel.java
-    └── InvlidOption.java
-   
-  └── smarthome/ # Core smart home classes
-  ├── HomeController.java
-  ├── SecurityCamera.java
-  ├── SmartDevice.java
-  ├── SmartHome.java
-  ├── SmartLight.java
-  └── Thermostat.java
+
+SmartHome Project Structure
+
+
+  ├── Source Packages/
+
+    ├── Actions/
+        ├── Adjustable.java      
+        └── Recordable.java      
+        
+    ├── Exceptions/
+        ├── InvalidBrightnessLevel.java  
+        └── InvalidOption.java           
+        
+    └── smarthome/
+        ├── HomeController.java
+        ├── SecurityCamera.java
+        ├── SmartDevice.java
+        ├── SmartHome.java
+        ├── SmartLight.java
+        └── Thermostat.java
+
 
   Example Run
 ===== Smart Home Menu =====
