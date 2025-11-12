@@ -12,13 +12,20 @@ public class HomeController {
  
  
  }
- void executeCommand(String deviceName, String command, int value){
- 
-for (SmartDevice device : DevicesList) {
-   if(device.name==deviceName)
-    device.executeCommand(command, value);
+public SmartDevice findDevice(String name) {
+    for (SmartDevice d : DevicesList) {
+        if (d.name.equalsIgnoreCase(name))
+            return d;
+    }
+    return null;
 }
+public boolean removeDevice(String name) {
+ for (SmartDevice d : new ArrayList<>(DevicesList)) { 
+        if (d.name.equalsIgnoreCase(name)) {
+            DevicesList.remove(d);
+            return true;
+        }
+    }
+    return false;
  
- }
- 
-}
+}}

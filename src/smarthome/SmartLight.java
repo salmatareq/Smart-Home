@@ -20,7 +20,10 @@ public class SmartLight extends SmartDevice implements Adjustable {
      if(isOn)
          throw new InvlidOption("Light is already on");
         
-     else  isOn=true;
+     else { isOn=true;
+     
+         System.out.println("Light has turned on");
+     }
     }
      catch(InvlidOption e)
     {
@@ -32,7 +35,8 @@ public class SmartLight extends SmartDevice implements Adjustable {
     void turnOff() {
       try{
      if(isOn)
-         isOn=false;
+     { isOn=false;    System.out.println("Light has turned off");
+     }
      else throw new InvlidOption("light is already off");
     }
      catch(InvlidOption e)
@@ -54,7 +58,7 @@ public class SmartLight extends SmartDevice implements Adjustable {
     @Override
     public void adjust(int value) {
     try{
-        if(value>=0||value<=100)
+        if(value>=0&&value<=100)
             brightness=value;
         else throw new InvalidBrightnesslevel("Invalid level");
     }

@@ -47,7 +47,13 @@ int temperature;
 
     @Override
     public void adjust(int value) {
-     temperature=value;
+    try{
+        if(value<0||value>100)
+         throw new InvlidOption("Invald value should be 0-100");
+        temperature=value;
+    }catch(InvlidOption e){
+          System.out.println(e);
+    }
     }
 
     @Override
